@@ -41,8 +41,8 @@ public partial class DDL : System.Web.UI.Page
         String S = "";
         for (int i = 0; i < ListBox1.Items.Count; i++)
         {
-            if(ListBox1.Items[i].Selected==true)
-                S+=ListBox1.Items[i].Text +",";
+            if (ListBox1.Items[i].Selected == true)
+                S += ListBox1.Items[i].Text + ",";
         }
         Label1.Text = S;
     }

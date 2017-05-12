@@ -20,9 +20,9 @@
         <asp:ListItem>d</asp:ListItem>
         <asp:ListItem>e</asp:ListItem>
     </asp:ListBox>
-    <asp:Button ID="Button1" runat="server" Text="--&gt;" />
+    <asp:Button ID="Button1" runat="server" Text="--&gt;" onclick="Button1_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Button2" runat="server" Text="&lt;--" />
+    <asp:Button ID="Button2" runat="server" Text="&lt;--" onclick="Button2_Click" />
 &nbsp;&nbsp;
     <asp:ListBox ID="ListBox2" runat="server" Width="113px" Height="145px" 
         SelectionMode="Multiple">
