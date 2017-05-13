@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-public partial class Validation : System.Web.UI.Page
+public partial class c2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -19,12 +19,6 @@ public partial class Validation : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-
-
-        lblMsg.Text = "Save success";
-    }
-    protected void Button2_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("~");
+        Response.Write(TextBox1.Text + TextBox2.Text);
     }
 }

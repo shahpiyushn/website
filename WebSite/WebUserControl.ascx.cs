@@ -11,20 +11,34 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-public partial class Validation : System.Web.UI.Page
+public partial class WebUserControl : System.Web.UI.UserControl
 {
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
-    protected void Button1_Click(object sender, EventArgs e)
+
+    public string T1
     {
-
-
-        lblMsg.Text = "Save success";
+        get 
+        {
+            return TextBox1.Text;
+        }
+        set
+        {
+            TextBox1.Text = value;
+        }
     }
-    protected void Button2_Click(object sender, EventArgs e)
+
+    public string T2
     {
-        Response.Redirect("~");
+        get
+        {
+            return TextBox2.Text;
+        }
+        set
+        {
+            TextBox2.Text = value;
+        }
     }
 }

@@ -5,6 +5,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Untitled Page</title>
+    
+    <script type="text/javascript">
+        function passwordLength(sender, args) 
+        {
+            //alert(args.Value);
+            if (args.Value.length < 5)
+                return args.IsValid = false;
+            else
+                return args.IsValid = true;
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -47,6 +58,10 @@
     <br />
     <br />
     Password     <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+    &nbsp;<asp:CustomValidator ID="CustomValidator1" runat="server" 
+        ControlToValidate="TextBox5" ErrorMessage="Enter min 5 to max 18 char" 
+        ClientValidationFunction="passwordLength">Enter 
+    min 5 to max 18 char</asp:CustomValidator>
     <br />
     Retype password
     <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
@@ -62,7 +77,7 @@
         ControlToValidate="TextBox7" ErrorMessage="Enter only numberic" 
         Operator="DataTypeCheck" Type="Integer">Enter only numberic</asp:CompareValidator>
     <br />
-    NNo2
+        No2
     <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
     <asp:CompareValidator ID="CompareValidator2" runat="server" 
         ControlToValidate="TextBox8" Display="Dynamic" ErrorMessage="No2 &gt; No1" 
@@ -70,7 +85,10 @@
         ValueToCompare="0">No2 &gt; 0</asp:CompareValidator>
     <br />
     <br />
+    <br />
     <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Save" />
+    &nbsp;<asp:Button ID="Button2" runat="server" CausesValidation="False" 
+        onclick="Button2_Click" Text="Cancel" />
     <br />
     <br />
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" />

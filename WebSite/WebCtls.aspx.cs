@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-public partial class Validation : System.Web.UI.Page
+public partial class WebCtls : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -19,12 +19,20 @@ public partial class Validation : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
+        TextBox t1 = (TextBox)WebUserControl1.FindControl("TextBox1");
+        Response.Write(t1.Text);
 
-
-        lblMsg.Text = "Save success";
+        TextBox t2 = (TextBox)WebUserControl1.FindControl("TextBox2");
+        Response.Write(t2.Text);
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~");
+        Response.Write(WebUserControl1.T1);
+        Response.Write(WebUserControl1.T2);
+    }
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        WebUserControl2.T1 = WebUserControl1.T1;
+        WebUserControl2.T2 = WebUserControl1.T2;
     }
 }
