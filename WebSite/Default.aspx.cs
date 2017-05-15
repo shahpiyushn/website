@@ -49,4 +49,19 @@ public partial class _Default : System.Web.UI.Page
 
         Response.Redirect("Default2.aspx");
     }
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+        CMath ob = new CMath();
+        ob.a = 5;
+        ob.b = 6;
+        TextBox3.Text=ob.add()+"";
+    }
+    protected void Button6_Click(object sender, EventArgs e)
+    {
+        //CMath ob = new CMath(5, 10);
+        //TextBox3.Text = ob.add() + "";
+
+        CMath ob = new CMath();
+        TextBox3.Text=ob.add(5, 10)+"";
+    }
 }

@@ -15,12 +15,27 @@ using System.Xml.Linq;
 /// </summary>
 public class CMath
 {
-    int a, b;
+    public int a, b;
+
 	public CMath()
 	{
-		//
-		// TODO: Add constructor logic here
-		//
+        a = 0;
+        b = 0;
 	}
+    public CMath(int x, int y)
+    {
+        a=x;
+        b = y;
+    }
+
+    public int add()
+    {
+        return a + b;
+    }
+
+    public int add(int x, int y)
+    {
+        return x + y;
+    }
 
 }

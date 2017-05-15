@@ -31,6 +31,9 @@
     &nbsp;
         <asp:Button ID="Button3" runat="server" onclick="Button3_Click" Text="True" />
 &nbsp;<asp:Button ID="Button4" runat="server" onclick="Button4_Click" Text="False" />
+    &nbsp;
+        <asp:Button ID="Button5" runat="server" onclick="Button5_Click" Text="CAdd1" />
+&nbsp;<asp:Button ID="Button6" runat="server" onclick="Button6_Click" Text="CAdd2" />
     </p>
     <p>
         <asp:Label ID="Label3" runat="server" Text="Answer"></asp:Label>
